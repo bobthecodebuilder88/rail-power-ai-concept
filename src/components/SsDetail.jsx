@@ -47,7 +47,7 @@ function Incoming({ x, n, meterX }) {
       <Dot cx={x + 16} cy={Y.bus2} />
       <MeterBox
         x={meterX}
-        y={26}
+        y={20}
         w={82}
         title={`R${n}`}
         unitW={28}
@@ -135,7 +135,8 @@ function Feeder({ f, state, highlight }) {
       {highlight && (
         <g>
           <rect x={f.x - 46} y={Y.fBr - 18} width={130} height={36} fill="none" stroke={AI} strokeWidth="1.6" strokeDasharray="4 3" />
-          <text x={f.x - 46} y={Y.fBr - 24} className="ai-label">AI 점검 후보 · 개방 37.8 → 45.2 ms</text>
+          <text x={f.x + 12} y={Y.fBr + 30} className="ai-label">AI 점검 후보</text>
+          <text x={f.x + 12} y={Y.fBr + 41} className="ai-sub">개방 37.8 → 45.2 ms</text>
         </g>
       )}
     </g>
